@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "skillName": "공격력 강화 v1",
+      "skillInfo": "일반공격 데미지가 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v2",
+      "skillInfo": "일반공격 데미지가 더욱 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v3",
+      "skillInfo": "일반공격 데미지를 극한으로 끌어올립니다."
+    },
+    {
+      "skillName": "민첩한 이동",
+      "skillInfo": "기본 이동속도가 증가합니다."
+    },
+    {
+      "skillName": "빠른 발사",
+      "skillInfo": "공격속도가 증가합니다."
+    },
+    {
+      "skillName": "신속한 조준",
+      "skillInfo": "차지 공격의 준비시간이 짧아집니다."
+    },
+    {
+      "skillName": "더블 샷",
+      "skillInfo": "일반 공격 시 화살을 2발씩 발사합니다."
+    },
+    {
+      "skillName": "고도의 집중력",
+      "skillInfo": "스킬 사용 시 공격력이 일시적으로 증가합니다."
+    },
+    {
+      "skillName": "약점 간파",
+      "skillInfo": "스킬 사용 시 적의 방어력를 무시합니다."
+    },
+    {
+      "skillName": "강력한 조준",
+      "skillInfo": "차지 공격 시 공격력이 50% 감소하지만 적을 관통합니다."
+    },
+    {
+      "skillName": "스트레이트",
+      "skillInfo": "스킬공격의 연속 화살이 4발씩 나갑니다."
+    },
+    {
+      "skillName": "빠른 충전",
+      "skillInfo": "궁극기의 쿨타임이 감소합니다."
+    },
+    {
+      "skillName": "무거운 화살",
+      "skillInfo": "일반 공격 시 적이 일정확률로 뒤로 밀려납니다."
+    },
+    {
+      "skillName": "에너지 흡수",
+      "skillInfo": "궁극기로 처치한 적 하나당 쿨타임이 감소합니다."
+    },
+    {
+      "skillName": "튕기는 화살",
+      "skillInfo": "일반공격 시 화살이 주변의 적에게 1번 튕깁니다."
+    }
+  ]
+}

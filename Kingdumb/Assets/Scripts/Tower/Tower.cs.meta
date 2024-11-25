@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 570754f1a4e923844a714fc9ea46af41
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - towerStonePosition: {instanceID: 0}
+  - buildEffect1: {fileID: 9110323613975309163, guid: 9889a705e29f12140b84bb262ef6ad70,
+      type: 3}
+  - buildEffect2: {fileID: 6273400797363422945, guid: 6b971a2b495464148b1f8dcc70b7550e,
+      type: 3}
+  - buildAudioClip: {fileID: 8300000, guid: b437b37e97d2e324b9a59ef258ef2d13, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

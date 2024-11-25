@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1104166847dd0714c8d86d0059e42f09
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _canvas: {instanceID: 0}
+  - _hpBar: {fileID: 192798194573441579, guid: 5315eb758763f144d8022784dd14bc6b, type: 3}
+  - _damageTextPrefab: {fileID: 5685072498344895396, guid: 53e467c14c824f34a8c8cf8c47b90693,
+      type: 3}
+  - slowEffect: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

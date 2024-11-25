@@ -1,0 +1,441 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Upper Body
+  m_Mask: 01000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Group
+    m_Weight: 1
+  - m_Path: Group/Main
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKIKSystem
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M/FKIKSpine_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/FKXRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/HipSwingerStabilizer
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/HipSwingerStabilizer/FKRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M/IKExtraSpine1_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M/IKExtraSpine1_M/IKSpine1_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M/IKExtraSpine2_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M/IKExtraSpine2_M/IKSpine2_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKHandle/IKScalerRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M/IKXOffsetRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M/IKXOffsetRoot_M/IKXRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M/IKSpRoot_M
+    m_Weight: 1
+  - m_Path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M/IKSpRoot_M/IKSpRootFollowOffset_M
+    m_Weight: 1
+  - m_Path: Mesh
+    m_Weight: 1
+  - m_Path: Mesh/Arm_m03
+    m_Weight: 1
+  - m_Path: Mesh/Body_m03
+    m_Weight: 1
+  - m_Path: Mesh/Face
+    m_Weight: 1
+  - m_Path: Mesh/Hair03
+    m_Weight: 1
+  - m_Path: Mesh/Head
+    m_Weight: 1
+  - m_Path: Mesh/Leg_m03
+    m_Weight: 1
+  - m_Path: Root_M
+    m_Weight: 1
+  - m_Path: Root_M/Hip_L
+    m_Weight: 1
+  - m_Path: Root_M/Hip_L/Knee_L
+    m_Weight: 1
+  - m_Path: Root_M/Hip_L/Knee_L/Ankle_L
+    m_Weight: 1
+  - m_Path: Root_M/Hip_L/Knee_L/Ankle_L/Toes_L
+    m_Weight: 1
+  - m_Path: Root_M/Hip_L/Knee_L/Ankle_L/Toes_L/ToesEnd_L
+    m_Weight: 1
+  - m_Path: Root_M/Hip_R
+    m_Weight: 1
+  - m_Path: Root_M/Hip_R/Knee_R
+    m_Weight: 1
+  - m_Path: Root_M/Hip_R/Knee_R/Ankle_R
+    m_Weight: 1
+  - m_Path: Root_M/Hip_R/Knee_R/Ankle_R/Toes_R
+    m_Weight: 1
+  - m_Path: Root_M/Hip_R/Knee_R/Ankle_R/Toes_R/ToesEnd_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Accessories_parentA
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/ChestA_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/ChestA_L/Chest_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/ChestA_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/ChestA_R/Chest_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Head_parent
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair1
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair1/Hair2
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair1/Hair2/Hair3
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair1/Hair2/Hair3/Hair4
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair1/Hair2/Hair3/Hair4/Hair5
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair6
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair6/Hair7
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair6/Hair7/Hair8
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair6/Hair7/Hair8/Hair9
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair10
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair10/Hair11
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair10/Hair11/Hair12
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair10/Hair11/Hair12/Hair13
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair10/Hair11/Hair12/Hair13/Hair14
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15/Hair16
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15/Hair16/Hair17
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15/Hair16/Hair17/Hair18
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15/Hair16/Hair17/Hair18/Hair19
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair15/Hair16/Hair17/Hair18/Hair19/Hair20
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair21
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair21/Hair22
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair21/Hair22/Hair23
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair21/Hair22/Hair23/Hair24
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair21/Hair22/Hair23/Hair24/Hair25
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair26
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair26/Hair27
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair26/Hair27/Hair28
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair26/Hair27/Hair28/Hair29
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair30
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair30/Hair31
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair30/Hair31/Hair32
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair30/Hair31/Hair32/Hair33
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair30/Hair31/Hair32/Hair33/Hair34
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair35
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair35/Hair36
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair35/Hair36/Hair37
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair35/Hair36/Hair37/Hair38
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair39
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair39/Hair40
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair39/Hair40/Hair41
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair42
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair42/Hair43
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair42/Hair43/Hair44
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1/Hair_n2
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1/Hair_n2/Hair_n3
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1/Hair_n2/Hair_n3/Hair_n4
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1/Hair_n2/Hair_n3/Hair_n4/Hair_n5
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n1/Hair_n2/Hair_n3/Hair_n4/Hair_n5/Hair_n6
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n7
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n7/Hair_n8
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n7/Hair_n8/Hair_n9
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n7/Hair_n8/Hair_n9/Hair_n10
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n11
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n11/Hair_n12
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n11/Hair_n12/Hair_n13
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n11/Hair_n12/Hair_n13/Hair_n14
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n15
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n15/Hair_n16
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n15/Hair_n16/Hair_n17
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n15/Hair_n16/Hair_n17/Hair_n18
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n15/Hair_n16/Hair_n17/Hair_n18/Hair_n19
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n20
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n20/Hair_n21
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n20/Hair_n21/Hair_n22
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n20/Hair_n21/Hair_n22/Hair_n23
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n24
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n24/Hair_n25
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n24/Hair_n25/Hair_n26
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n24/Hair_n25/Hair_n26/Hair_n27
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n28
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n28/Hair_n29
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n28/Hair_n29/Hair_n30
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n28/Hair_n29/Hair_n30/Hair_n31
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n28/Hair_n29/Hair_n30/Hair_n31/Hair_n32
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n50
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n50/Hair_n51
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n50/Hair_n51/Hair_n52
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n53
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n53/Hair_n54
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n53/Hair_n54/Hair_n55
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n56
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n56/Hair_n57
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/Hair_n56/Hair_n57/Hair_n58
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L/PinkyFinger4_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L/RingFinger4_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L/IndexFinger4_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L/MiddleFinger4_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Sword_parentL
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L/ThumbFinger4_L
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R/PinkyFinger4_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R/RingFinger4_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R/IndexFinger4_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R/MiddleFinger4_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Sword_parentR
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R
+    m_Weight: 1
+  - m_Path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R/ThumbFinger4_R
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_C0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_C0/skirt_Cb0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_C1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_C1/skirt_Cb1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L0/skirt_Lb0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L1/skirt_Lb1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L2
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_L2/skirt_Lb2
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_R0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_R0/skirt_Rb0
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_R1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirt_R1/skirt_Rb1
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirtR2
+    m_Weight: 1
+  - m_Path: Root_M/skirt_Root/skirtR2/skirt_Rb2
+    m_Weight: 1

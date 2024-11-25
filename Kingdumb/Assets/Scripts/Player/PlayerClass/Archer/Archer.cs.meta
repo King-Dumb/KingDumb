@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 4388b47b9a5850141afa87daed094f91
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deathClip: {instanceID: 0}
+  - hitClip: {instanceID: 0}
+  - generateTransform: {instanceID: 0}
+  - arrowPrefab: {fileID: 258542157770858963, guid: 1ef977c5d4fd0ef4a868b5f452db0457,
+      type: 3}
+  - chargingArrowPrefab: {fileID: 8495378715952046963, guid: ed902fdcf99ed304bbc28b9a38ca215a,
+      type: 3}
+  - chargingEffectPrefab1: {fileID: 2720414375228966861, guid: 1e67a450f43e9524199504aadf705f4c,
+      type: 3}
+  - chargingEffectPrefab2: {fileID: 2148480079006769212, guid: 63359c1354ad83e4c9d2995d5bf8b00e,
+      type: 3}
+  - magicArrowPrefab: {fileID: 2646451084061373469, guid: bf3c37db785e9ac4a981f8beecb71f90,
+      type: 3}
+  - skillEffectPrefab: {fileID: 5168219624368374402, guid: fbd1ff54895603f45ad69644b503e604,
+      type: 3}
+  - ultimatePrefab: {fileID: 4787283399758162142, guid: 8402023e77a63bf4382e2269cb7952fa,
+      type: 3}
+  - portalPrefab: {fileID: 7101708944274897413, guid: 6a2e6322cf5cbd24fba3e6fcfb2526ed,
+      type: 3}
+  - chargingBarController: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

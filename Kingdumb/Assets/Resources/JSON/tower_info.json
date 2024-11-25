@@ -1,0 +1,120 @@
+{
+    "towers": [
+        {
+            "towerType": 0,
+            "towerData": [
+                {
+                    "level": 1,
+                    "towerName": "전사타워",
+                    "towerInfo": "기본형 전사타워\n몬스터에 투사체를 던져 공격합니다.",
+                    "requiredGold": 100
+                },
+                {
+                    "level": 2,
+                    "towerName": "전사타워",
+                    "towerInfo": "2단계 전사타워\n몬스터에 투사체를 던져 공격합니다.\n공격력이 증가합니다.",
+                    "requiredGold": 200
+                },
+                {
+                    "level": 3,
+                    "towerName": "전사타워",
+                    "towerInfo": "3단계 전사타워\n몬스터에 투사체를 던져 공격합니다.\n사거리가 증가합니다.",
+                    "requiredGold": 400
+                },
+                {
+                    "level": 4,
+                    "towerName": "전사타워",
+                    "towerInfo": "4단계 전사타워\n몬스터에 투사체를 던져 공격합니다.\n적중한 적에 범위 피해를 입힙니다.\n넉백 효과가 추가됩니다.",
+                    "requiredGold": 800
+                }
+            ]
+        },
+        {
+            "towerType": 1,
+            "towerData": [
+                {
+                    "level": 1,
+                    "towerName": "궁수타워",
+                    "towerInfo": "기본형 궁수타워\n몬스터에 투사체를 던져 공격합니다.\n",
+                    "requiredGold": 120
+                },
+                {
+                    "level": 2,
+                    "towerName": "궁수타워",
+                    "towerInfo": "2단계 궁수타워\n몬스터에 투사체를 던져 공격합니다.\n사거리가 증가합니다.",
+                    "requiredGold": 250
+                },
+                {
+                    "level": 3,
+                    "towerName": "궁수타워",
+                    "towerInfo": "3단계 궁수타워\n몬스터에 투사체를 던져 공격합니다.\n대기 시간이 감소합니다.",
+                    "requiredGold": 500
+                },
+                {
+                    "level": 4,
+                    "towerName": "궁수타워",
+                    "towerInfo": "4단계 궁수타워\n몬스터에 투사체를 던져 공격합니다.\n마법 효과가 추가됩니다.",
+                    "requiredGold": 1000
+                }
+            ]
+        },
+        {
+            "towerType": 2,
+            "towerData": [
+                {
+                    "level": 1,
+                    "towerName": "마법사 타워",
+                    "towerInfo": "기본형 마법사 타워\n몬스터에 투사체를 던져 공격합니다.",
+                    "requiredGold": 150
+                },
+                {
+                    "level": 2,
+                    "towerName": "마법사 타워",
+                    "towerInfo": "1단계 마법사 타워\n몬스터에 투사체를 던져 공격합니다.\n사거리가 증가합니다.",
+                    "requiredGold": 300
+                },
+                {
+                    "level": 3,
+                    "towerName": "마법사 타워",
+                    "towerInfo": "2단계 마법사 타워\n몬스터에 투사체를 던져 공격합니다.\n공격력이 증가합니다.",
+                    "requiredGold": 600
+                },
+                {
+                    "level": 4,
+                    "towerName": "마법사 타워",
+                    "towerInfo": "3단계 마법사 타워\n몬스터에 투사체를 던져 공격합니다.\n적중한 적에 범위 피해를 입힙니다.\n슬로우 효과가 추가됩니다.",
+                    "requiredGold": 1200
+                }
+            ]
+        },
+        {
+            "towerType": 3,
+            "towerData": [
+                {
+                    "level": 1,
+                    "towerName": "사제 타워",
+                    "towerInfo": "기본형 사제 타워\n사거리 내 플레이어 체력을 회복합니다.",
+                    "requiredGold": 140
+                },
+                {
+                    "level": 2,
+                    "towerName": "사제 타워",
+                    "towerInfo": "2단계 사제 타워\n사거리 내 플레이어 체력을 회복합니다.\n대기 시간이 감소합니다.",
+                    "requiredGold": 280
+                },
+                {
+                    "level": 3,
+                    "towerName": "사제 타워",
+                    "towerInfo": "3단계 사제 타워\n사거리 내 플레이어 체력을 회복합니다.\n체력 회복량이 증가합니다.",
+                    "requiredGold": 560
+                },
+                {
+                    "level": 4,
+                    "towerName": "사제 타워",
+                    "towerInfo": "4단계 사제 타워\n사거리 내 플레이어 체력을 회복합니다.\n사거리 내 몬스터들에게 일정 피해를 입힙니다.",
+                    "requiredGold": 1100
+                }
+            ]
+        }
+    ]
+}

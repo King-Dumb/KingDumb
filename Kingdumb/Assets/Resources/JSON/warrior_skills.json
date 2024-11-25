@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "skillName": "공격력 강화 v1",
+      "skillInfo": "일반 공격 데미지가 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v2",
+      "skillInfo": "일반 공격 데미지가 더욱 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v3",
+      "skillInfo": "일반 공격력을 한계치까지 끌어올립니다."
+    },
+    {
+      "skillName": "강인한 갑옷",
+      "skillInfo": "방어력이 증가합니다."
+    },
+    {
+      "skillName": "체력 단련",
+      "skillInfo": "최대 HP가 증가합니다."
+    },
+    {
+      "skillName": "빠른 구보",
+      "skillInfo": "달리기 시 이동속도가 증가합니다."
+    },
+    {
+      "skillName": "끝없는 수련",
+      "skillInfo": "적 처치 시 영구적으로 방어력이 증가합니다."
+    },
+    {
+      "skillName": "거대한 검날",
+      "skillInfo": "스킬 공격 시 검의 크기가 증가합니다."
+    },
+    {
+      "skillName": "넓은 시야",
+      "skillInfo": "스킬 공격 시 검의 사거리가 증가합니다."
+    },
+    {
+      "skillName": "대검 마스터",
+      "skillInfo": "영구적으로 공격 속도가 감소하지만 공격력이 매우 크게 증가합니다."
+    },
+    {
+      "skillName": "빠른 캐치",
+      "skillInfo": "스킬 공격의 쿨타임이 감소합니다."
+    },
+    {
+      "skillName": "에어 스트라이커",
+      "skillInfo": "궁극기 사용 시 공중 몬스터는 즉사합니다."
+    },
+    {
+      "skillName": "빠른 충전",
+      "skillInfo": "궁극기의 쿨타임이 감소합니다."
+    },
+    {
+      "skillName": "광역 폭발",
+      "skillInfo": "궁극기로 적을 처치하는 최대 마릿수가 증가합니다."
+    },
+    {
+      "skillName": "궁극의 휠윈드",
+      "skillInfo": "적 처치시 스킬 공격의 쿨타임이 감소합니다."
+    }
+  ]
+}

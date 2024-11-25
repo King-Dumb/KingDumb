@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "skillName": "공격력 강화 v1",
+      "skillInfo": "일반 공격력이 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v2",
+      "skillInfo": "일반 공격력이 더욱 증가합니다."
+    },
+    {
+      "skillName": "공격력 강화 v3",
+      "skillInfo": "일반 공격력을 한계치까지 끌어올립니다."
+    },
+    {
+      "skillName": "마력 파편",
+      "skillInfo": "일반 공격 시 폭발 데미지가 증가합니다."
+    },
+    {
+      "skillName": "신속한 마법",
+      "skillInfo": "일반 공격의 투사체 속도가 빨라집니다."
+    },
+    {
+      "skillName": "마력 교환",
+      "skillInfo": "최대 체력이 감소하지만, 적 처치 시 스킬 쿨타임이 줄어듭니다."
+    },
+    {
+      "skillName": "호밍 매직",
+      "skillInfo": "일반 공격이 적을 추적합니다."
+    },
+    {
+      "skillName": "넓은 마법진",
+      "skillInfo": "스킬 공격의 범위가 증가합니다."
+    },
+    {
+      "skillName": "마법 수련",
+      "skillInfo": "스킬 공격의 쿨타임이 감소합니다."
+    },
+    {
+      "skillName": "빙결 마법사",
+      "skillInfo": "이제 모든 공격이 빙결 속성을 가집니다.\n 공격에 맞은 적은 느려집니다."
+    },
+    {
+      "skillName": "신속한 주문",
+      "skillInfo": "스킬 공격의 시전 시간이 감소합니다."
+    },
+    {
+      "skillName": "궁극의 마력",
+      "skillInfo": "궁극기의 재사용 대기시간이 감소합니다."
+    },
+    {
+      "skillName": "마법의 가호",
+      "skillInfo": "부활 시간이 감소합니다."
+    },
+    {
+      "skillName": "듀얼 오브",
+      "skillInfo": "궁극기의 데미지가 2배로 늘어납니다."
+    },
+    {
+      "skillName": "다크 소서러",
+      "skillInfo": "최대체력이 감소하고 모든 공격이 암흑 속성을 가집니다. \n 공격력이 증폭됩니다."
+    }
+  ]
+}

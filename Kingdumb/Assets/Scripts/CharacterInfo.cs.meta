@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ef3d9a1f1532d8f40b0596d056ede6d9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - LevelUpPrefab: {fileID: 6350645589263554224, guid: a049e8cd57ef6d348ac321af9e86e674,
+      type: 3}
+  - deathClip: {instanceID: 0}
+  - hitClip: {instanceID: 0}
+  - levelUpClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,14 @@
+{
+    "spawnDuration": [1.0, 0.5, 0.3],
+    "crossCount": [1, 2, 4],
+    "corpsCount": [2, 4, 6],
+    "maxCrossCount": [12, 18, 24],
+    "maxCorpsCount": [10, 15, 20],
+    "bigWaveCount": [20, 30, 40],
+    "upgradeCountTime": [10.0, 5.0, 2.0],
+    "flagCount": [
+        [10, 20, 30, 100000],
+        [20, 40, 60, 100000],
+        [30, 60, 90, 100000]
+    ]
+}

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5fce3f9bae8c7f64b9e21babcf8bbf22
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - chargingSlider: {fileID: 1716943297572002650, guid: 53480909a3c17de4eb9aad9425842057,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

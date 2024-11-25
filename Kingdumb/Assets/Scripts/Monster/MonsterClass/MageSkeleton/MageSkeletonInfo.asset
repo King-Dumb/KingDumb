@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b2d62b8d5e2f04595a847853a04df4, type: 3}
+  m_Name: MageSkeletonInfo
+  m_EditorClassIdentifier: 
+  monsterName: MageSkeleton
+  hp: 100
+  attackDamage: 30
+  defencePower: 0
+  moveSpeed: 2
+  rotationSpeed: 480
+  attackDuration: 5
+  attackRange: 8
+  outOfAttackRange: 12
+  detectionRange: 15
+  outOfDetectionRange: 20
+  aggroTriggerHp: 100
+  aggroDuration: 10
+  expReward: 1
+  goldReward: 25
+  gaugeReward: 1

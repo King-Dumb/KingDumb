@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6b313d6a107ada4882cb72cb197f5c5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - energyBlastPrefab: {instanceID: 0}
+  - darknessBlastPrefab: {fileID: 5187754652299634421, guid: 271aaec3da6ec1b41bab672c251df3b3,
+      type: 3}
+  - bloodBlastPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
