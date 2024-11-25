@@ -169,7 +169,92 @@ Q 입력을 통해 궁극기 공격 가능
 
 ## Ⅳ. 팀원 소개 및 회고
 
-<img src="./docs/Team.png" alt="Team" width="600px">
+<table>
+  <tr>
+      <td align="center">
+        <a href="https://github.com/HyunV">
+          <img src="https://avatars.githubusercontent.com/HyunV" width="120px;" alt="HyunV">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/05Ri">
+          <img src="https://avatars.githubusercontent.com/05Ri" width="120px;" alt="05Ri">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jinhyeon-Kim-6619">
+          <img src="https://avatars.githubusercontent.com/Jinhyeon-Kim-6619" width="120px;" alt="Jinhyeon-Kim-6619">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/SeongYunOH">
+          <img src="https://avatars.githubusercontent.com/SeongYunOH" width="120px;" alt="SeongYunOH">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Basaeng">
+          <img src="https://avatars.githubusercontent.com/Basaeng" width="120px;" alt="Basaeng">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jinhyunji">
+          <img src="https://avatars.githubusercontent.com/Jinhyunji" width="120px;" alt="Jinhyunji">
+        </a>
+      </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/HyunV">
+        현준호
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/05Ri">
+        김예현
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jinhyeon-Kim-6619">
+        김진현
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SeongYunOH">
+        오성윤
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Basaeng">
+        이종민
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jinhyunji">
+        진현지
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+        팀장, 서버
+    </td>
+    <td align="center">
+      클라이언트
+    </td>
+    <td align="center">
+      클라이언트
+    </td>
+    <td align="center">
+      클라이언트
+    </td>
+    <td align="center">
+      서버
+    </td>
+    <td align="center">
+      서버
+    </td>
+  </tr>
+</table>
 
 ### 현준호
 
