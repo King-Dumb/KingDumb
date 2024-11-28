@@ -40,7 +40,6 @@
 #### 시작 화면
 
 <img src="./docs/Title.gif" alt="Title" width="600px">
-<br/>
 - Start 버튼 클릭 시 로그인 화면으로 넘어감
 
 <br/>
@@ -48,7 +47,6 @@
 #### 로그인 화면
 
 <img src="./docs/Login.gif" alt="Login" width="600px">
-<br/>
 - 닉네임을 입력하여 비회원으로 게임 로비 입장
 
 <br/>
@@ -56,7 +54,6 @@
 #### 로비 화면
 
 <img src="./docs/Lobby.gif" alt="Lobby" width="600px">
-<br/>
 - 방 목록 : 방을 클릭하면 방에 입장<br/>
 - 방 생성 : 방 제목과 비공개 여부를 클릭할수있음<br/>
     - 비공개 체크시 : 방목록에 잠금이미지와 함께 표시되며 방코드를 입력 해야 입장 가능<br/>
@@ -68,7 +65,6 @@
 #### 대기방 화면
 
 <img src="./docs/WaitingRoom.gif" alt="Room" width="600px">
-<br/>
 - 방 인원들은 Ready 버튼으로 게임 준비
 - 방장은 인원들이 모두 Ready 시 F5 입력으로 게임 시작 가능
 - 플레이할 캐릭터를 고르고 체험해볼 수 있음
@@ -78,7 +74,6 @@
 ### 02. 플레이어 기본 조작 🏃‍♀️
 
 <img src="./docs/Move.gif" alt="Move" width="600px">
-<br/>
 
 #### 플레이어 이동
 
@@ -104,7 +99,6 @@ Q 입력을 통해 궁극기 공격 가능
 #### 스킬 강화
 
 <img src="./docs/SkillTree.gif" alt="SkillTree" width="600px">
-<br/>
 몬스터 처치 시 얻는 경험치를 통해 레벨 업 후 V 입력을 통해 스킬 강화 UI 접근 가능
 
 각 직업군 별 고유한 스킬 강화, 최대 10개의 강화 가능
@@ -113,7 +107,6 @@ Q 입력을 통해 궁극기 공격 가능
 #### 타워
 
 <img src="./docs/Tower.gif" alt="Tower" width="600px">
-<br/>
 몬스터 처치 시 얻는 골드를 통해 타워 설치 가능
 
 타워 부지에 일정 거리 이내로 접근 시 F 입력을 통해 타워 설치 UI 접근 가능
@@ -122,23 +115,24 @@ Q 입력을 통해 궁극기 공격 가능
 #### 몬스터
 
 <img src="./docs/Monster.gif" alt="Monster" width="600px">
-<br/>
 일반, 전사, 마법사, 도적, 플라잉 몬스터
-
+<img src="./docs/Boss.gif" alt="Boss" width="600px">
+<br/>
+보스 몬스터
 <br/>
 
 #### 왕자
 
 <img src="./docs/Nexus.gif" alt="Nexus" width="600px">
-<br/>
 일정 시간이 지나면 랜덤한 위치를 향해 랜덤한 속도로 이동
 
 플레이어가 가까이 다가간 후 Space bar 입력을 통해 왕자님 안기 가능
 
 #### 스테이지 이동
 
-<img src="./docs/Stage.png" alt="JumpTile" width="600px">
-<br/>
+<img src="./docs/Stage1.png" alt="Stage1" width="600px">
+<img src="./docs/Stage2.png" alt="Stage2" width="600px">
+<img src="./docs/Stage3.png" alt="Stage3" width="600px">
 총 3개의 스테이지, 마지막 스테이지에서 보스 몬스터 출현
 
 #### 빅 웨이브
