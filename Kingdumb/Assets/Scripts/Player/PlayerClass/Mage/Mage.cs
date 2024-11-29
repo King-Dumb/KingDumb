@@ -18,21 +18,21 @@ public class Mage : CharacterInfo, IPlayerClass
     public Mage()
     {
         _classType = "Mage";
-        _maxHp = 90;
-        _hp = 90;
-        _attackDamage = 20;
-        _defencePower = 0;
-        _attackDuration = 1.2f;
-        _skillDuration = 3f;
-        _ultimateDuration = 20f;
-        _baseMoveSpeed = _moveSpeed = 6f;
-        _runningSpeed = _moveSpeed * 1.8f;
+        _maxHp = _hp = 90; // 기준 최대 체력, 채력
+        _baseMoveSpeed = _moveSpeed = 5f; // 기준 이동 속도, 이동 속도
+        _runningSpeed = 1.8f * _moveSpeed; // 달리기 속도
+        _baseAttackDamage = _attackDamage = 20f; // 기준 공격력, (버프 받는) 공격력
+        _baseSkillDamage = _skillDamage = 10f; // 기준 스킬 공격력, (버프 받는) 스킬 공격력
+        _baseUltimateDamage = _ultimateDamage = 15f; // 기준 궁극기 공격력, (버프 받는) 궁극기 공격력
+        _defencePower = 0; // 방어력
+        _attackDuration = 1f; // 공격속도(초)
+        _skillDuration = 3f; // 스킬 쿨타임(초)
+        _ultimateDuration = 20f; // 궁 쿨타임(초)
+        _level = 1; // 레벨
         _skillPoint = 1; // 스킬 포인트
-        _level = 1;
     }
 
     private float _attackSplashDamage = 3;
-    private float _skillDamage = 10;
 
     public void Attack()
     {
@@ -126,6 +126,7 @@ public class Mage : CharacterInfo, IPlayerClass
     [PunRPC]
     public void MageUltimateBroadcast(Vector3 firePosition, Vector3 fireDirection)
     {
+        ultimateHolder.SetUltimateDamage(_ultimateDamage);
         ultimateHolder.Attack(currentUltimateType, firePosition, fireDirection, _ownerPhotonViewID);
     }
 

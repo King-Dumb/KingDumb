@@ -197,11 +197,14 @@ public class Nexus : MonoBehaviourPun, IDamageable
     [PunRPC]
     public void ApplyUpdatedHealthForNexus(float newHealth, bool newDead)
     {
+        if (newHealth < _nexusHealth)
+        {
+            nexusUnderAttackUI.SetActive(true);
+        }
         _nexusHealth = newHealth;
         isNexusDead = newDead;
         nexusHealthSlider.value = _nexusHealth;
 
-        nexusUnderAttackUI.SetActive(true);
 
         // TODO: 알림 동기화 필요
         Invoke("HideNexusDamageAlert", 3f);

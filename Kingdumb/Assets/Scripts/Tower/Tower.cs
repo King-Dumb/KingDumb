@@ -124,7 +124,8 @@ public class Tower : MonoBehaviourPun
 
         foreach (GameObject fieldMonster in monsterList)
         {
-            if (fieldMonster == null || !fieldMonster.activeSelf)
+            Debug.Log(fieldMonster.name);
+            if (fieldMonster == null || !fieldMonster.activeSelf || fieldMonster.GetComponent<IMonster>().IsDead())
             {
                 continue;
             }
@@ -157,6 +158,7 @@ public class Tower : MonoBehaviourPun
     [PunRPC]
     public void TowerGenerateStone(float damage, float attackSpeed, Vector3 targetPosition, int towerType, bool isHighestLevel)
     {
+        // Debug.Log(projectileList[towerType].name);
         GameObject projectile = GameManager.Instance.Instantiate(projectileList[towerType].name, towerStonePosition.position, Quaternion.identity);
 
         //Debug.Log($"타워 투사체가 생성된 위치 : {projectile.transform.position}");

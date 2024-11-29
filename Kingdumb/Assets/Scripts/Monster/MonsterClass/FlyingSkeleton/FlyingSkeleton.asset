@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: FlyingSkeleton
   hp: 50
-  attackDamage: 30
+  attackDamage: 25
   defencePower: 1
   moveSpeed: 3
   rotationSpeed: 480

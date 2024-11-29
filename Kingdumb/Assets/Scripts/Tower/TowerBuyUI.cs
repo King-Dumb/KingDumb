@@ -117,6 +117,7 @@ public class TowerBuyUI : MonoBehaviourPun
                 // 골드가 제대로 파싱되었는지 확인하는 테스트용 코드: 버튼에 해당 타워 구매금액이 달린다.
                 towerGoldImages[i].SetActive(true);
                 towerButtonTexts[i].text = TowerManager.Inst.GetRequireGold(towerType, i).ToString();
+                towerButtons[i].interactable = true;
                 Sprite newSprite = Resources.Load<Sprite>(towerSpritePath + towerType + i);
                 towerButtonImages[i].sprite = newSprite;
                 towerFlagImages[i].color = towerFlagColors[towerType];
@@ -131,14 +132,19 @@ public class TowerBuyUI : MonoBehaviourPun
             // 타워가 건설되어 있고, 건설된 타워가 현재 활성화된 토글의 타워와 일치할 때만 타워 레벨에 따른 버튼 활성화를 고려
             if (isTowerBuilt && builtTowerType == towerType)
             {
-                for (int i = 0; i <= (builtTowerLevel + 1 >= towerButtons.Length ? builtTowerLevel : builtTowerLevel + 1); i++)
-                {
-                    towerButtons[i].interactable = true;
-                }
+                // for (int i = 0; i <= (builtTowerLevel + 1 >= towerButtons.Length ? builtTowerLevel : builtTowerLevel + 1); i++)
+                // {
+                //     towerButtons[i].interactable = true;
+                // }
 
                 // 선택된 타워를 표시
                 towerGoldImages[builtTowerLevel].SetActive(false);
                 towerButtonTexts[builtTowerLevel].text = "건설됨";
+
+                if (builtTowerLevel + 1 < towerButtons.Length)
+                {
+                    towerButtons[builtTowerLevel + 1].interactable = true;
+                }
             }
             else
             {
@@ -182,6 +188,8 @@ public class TowerBuyUI : MonoBehaviourPun
             {
                 towerButtonTexts[builtTowerLevel].text = TowerManager.Inst.GetRequireGold(builtTowerType, builtTowerLevel).ToString(); // 선택받지 못한 타워의 UI 텍스트 초기화
                 towerGoldImages[builtTowerLevel].SetActive(true);
+                towerButtons[builtTowerLevel].interactable = false;
+
             }
             Tower builtTower = TowerManager.Inst.GetTowerByIndex(selectedTowerGroundIndex);
 
@@ -193,6 +201,7 @@ public class TowerBuyUI : MonoBehaviourPun
 
         towerButtonTexts[towerLevel].text = "건설됨";
         towerGoldImages[towerLevel].SetActive(false);
+        towerButtons[towerLevel].interactable = false;
 
         Vector3 newTowerDirection = (selectedTowerGround.transform.position - Vector3.zero).normalized;
         Quaternion newTowerRotation = Quaternion.LookRotation(newTowerDirection);
@@ -209,7 +218,10 @@ public class TowerBuyUI : MonoBehaviourPun
         // maxTowerLevelList[builtTowerType] = towerLevel + 1; // 타워의 최대 건설 가능 레벨 반영
 
         // 즉각적인 버튼 상태 업데이트 위해서 추가한 코드
-        towerButtons[(builtTowerLevel + 1 >= towerButtons.Length ? builtTowerLevel : builtTowerLevel + 1)].interactable = true;
+        if (builtTowerLevel + 1 < towerButtons.Length)
+        {
+            towerButtons[builtTowerLevel + 1].interactable = true;
+        }
     }
 
     // 각 버튼의 EventTrigger 컴포넌트에서 호출됨

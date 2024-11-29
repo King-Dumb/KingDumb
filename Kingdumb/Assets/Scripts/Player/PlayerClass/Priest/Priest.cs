@@ -17,23 +17,23 @@ public class Priest : CharacterInfo, IPlayerClass
     private float golemSpeed = 5f;
     private float moveSpeedOnSkill; // 스킬 지속 동안 이동속도
     private bool isSpeedUp = false; // 스킬 지속 동안 이동속도 증가 여부
-
     private bool canHealNexus = false; // 스킬이 넥서스를 힐할 수 있는지 여부
 
     public Priest()
     {
         _classType = "Priest";
-        _maxHp = _hp = 80;
-        _attackDamage = 5f;
-        _defencePower = 0;
-        _attackDuration = 0.8f;
-        _skillDuration = 10f; // 스킬 쿨타임
-        _ultimateDuration = 30f; // 궁극기 쿨타임 -> 쿨타임(30초) - 궁극기 지속시간(20초) = 10 초
+        _maxHp = _hp = 80; // 기준 최대 체력, 채력
         _baseMoveSpeed = _moveSpeed = 5f; // 기준 이동 속도, 이동 속도
-        _runningSpeed = _moveSpeed * 2f;
+        _runningSpeed = 2f * _moveSpeed; // 달리기 속도
+        _baseAttackDamage = _attackDamage = 10f; // 기준 공격력, (버프 받는) 공격력
+        _baseSkillDamage = _skillDamage = 6f; // 기준 스킬 공격력, (버프 받는) 스킬 공격력
+        _baseUltimateDamage = _ultimateDamage = 15f; // 기준 궁극기 공격력, (버프 받는) 궁극기 공격력
+        _defencePower = 0; // 방어력
+        _attackDuration = 0.8f; // 공격속도(초)
+        _skillDuration = 3f; // 스킬 쿨타임(초)
+        _ultimateDuration = 30f; // 궁 쿨타임(초)
         _level = 1; // 레벨
         _skillPoint = 1; // 스킬 포인트
-        _gold = 0; // 골드
     }
 
     public void Attack()
@@ -74,6 +74,7 @@ public class Priest : CharacterInfo, IPlayerClass
         }
 
         _hp = _maxHp;
+        skillPricePerSecond = _skillDamage;
     }
 
     [PunRPC]

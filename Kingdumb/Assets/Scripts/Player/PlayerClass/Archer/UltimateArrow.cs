@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UltimateArrow : MonoBehaviour, IArrow
 {
-    private float speed = 5f;
+    private readonly float speed = 8f;
     private float _damage;
     public GameObject attackedEffect;
     private Vector3 _dir;

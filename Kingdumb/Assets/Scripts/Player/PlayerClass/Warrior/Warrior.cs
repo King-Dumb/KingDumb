@@ -33,36 +33,24 @@ public class Warrior : CharacterInfo, IPlayerClass
 
     public Warrior()
     {
-        // _classType = "Warrior";
-        // _maxHp = 120;
-        // _hp = 120;
-        // _attackDamage = 10f;
-        // _defencePower = 5f;
-        // _attackDuration = 1f;
-        // _skillDuration = 3f;
-        // _moveSpeed = 5f;
-        // _runningSpeed = _moveSpeed * 2f;
-
         _classType = "Warrior";
         _maxHp = _hp = 120; // 기준 최대 체력, 채력
         _baseMoveSpeed = _moveSpeed = 4.5f; // 기준 이동 속도, 이동 속도
-        _runningSpeed = 1.5f * _moveSpeed; // 달리기 속도
-        _baseAttackDamage = _attackDamage = 30; // 기준 공격력, 공격력
+        _runningSpeed = 1.8f * _moveSpeed; // 달리기 속도
+        _baseAttackDamage = _attackDamage = 30f; // 기준 공격력, (버프 받는) 공격력
+        _baseSkillDamage = _skillDamage = 45f; // 기준 스킬 공격력, (버프 받는) 스킬 공격력
+        _baseUltimateDamage = _ultimateDamage = 90f; // 기준 궁극기 공격력, (버프 받는) 궁극기 공격력
         _defencePower = 5; // 방어력
         _attackDuration = 0.3f; // 공격속도(초)
         _skillDuration = 3f; // 스킬 쿨타임(초)
         _ultimateDuration = 10f; // 궁 쿨타임(초)
         _level = 1; // 레벨
         _skillPoint = 1; // 스킬 포인트
-        _gold = 0; // 골드
     }
 
     private void Start()
     {
         InitializeComponents();
-
-        skillDamage = 45f;
-        ultimateDamage = 90f;
 
         // Default Attack의 Sword 참조
         defaultSword = defaultSwordObject.GetComponent<DefaultSword>();
@@ -73,7 +61,7 @@ public class Warrior : CharacterInfo, IPlayerClass
         // Skill Attack의 Sword 참조
         throwingSword = throwingSwordObject.GetComponent<ThrowingSword>();
         throwingSword.playerPhotonViewId = _ownerPhotonViewID;
-        throwingSword.throwingDamage = skillDamage;
+        throwingSword.throwingDamage = _skillDamage;
 
         if (photonView.IsMine)
         {
@@ -173,7 +161,7 @@ public class Warrior : CharacterInfo, IPlayerClass
 
             if (targetMonster != null)
             {
-                float flyUltimateDamage = ultimateDamage;
+                float flyUltimateDamage = _ultimateDamage;
 
                 if (isFlyingMonsterInstantDeath)
                 {
@@ -316,7 +304,7 @@ public class Warrior : CharacterInfo, IPlayerClass
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("IncreaseThrowingSwordScale", RpcTarget.Others, amount);
+            photonView.RPC("IncreaseThrowingSwordDistance", RpcTarget.Others, amount);
         }
 
         throwingSword.curveAmount += amount; // 10f

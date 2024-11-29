@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -28,6 +27,7 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(float towerProjectileDamage, float towerProjectileSpeed, Vector3 targetPosition, int towerType, bool isHighestLevel, int photonViewID)
     {
+        Debug.Log("Initialize 실행 시작");
         //Debug.Log($"현재 타워가 최종 강화 형태인지 확인 : {isHighestLevel}");
         projectileDamage = towerProjectileDamage;
         projectileSpeed = towerProjectileSpeed;
@@ -70,14 +70,11 @@ public class Projectile : MonoBehaviour
         targetDirection = (targetPosition - transform.position).normalized;
 
         //Debug.Log($"타겟 몬스터의 이름 : {targetMonster.name}");
-    }
 
-    private void OnEnable()
-    {
+        // OnEnable이 Initialize보다 먼저 실행되는 관계로 towerType 초기화 문제가 있어서 여기로 옮겨옴
         projectileParticle = GameManager.Instance.Instantiate("towerProjectileParticle" + towerType, transform.position, Quaternion.identity);
         projectileParticle.transform.parent = transform;
-
-        //Invoke("DestroyProjectileDamage", 4f);
+        Invoke("DestroyProjectileDamage", 2f);
 
         muzzleParticle = GameManager.Instance.Instantiate("towerMuzzleParticle" + towerType, transform.position, Quaternion.identity);
         GameManager.Instance.Destroy(muzzleParticle, 1.5f);
@@ -92,16 +89,38 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    // private void OnDisable()
-    // {
-    //     ParticleSystem[] particleSystems = projectileParticle.GetComponentsInChildren<ParticleSystem>();
-    //     foreach (ParticleSystem ps in particleSystems)
-    //     {
-    //         Debug.Log("파티클 꼬리 자르는 중");
-    //         ps.Clear();
-    //         // ps.Play();
-    //     }
-    // }
+    private void OnEnable()
+    {
+        // Debug.Log("Enable 실행 시작");
+        // projectileParticle = GameManager.Instance.Instantiate("towerProjectileParticle" + towerType, transform.position, Quaternion.identity);
+        // projectileParticle.transform.parent = transform;
+        // Invoke("DestroyProjectileDamage", 2f);
+
+        // muzzleParticle = GameManager.Instance.Instantiate("towerMuzzleParticle" + towerType, transform.position, Quaternion.identity);
+        // GameManager.Instance.Destroy(muzzleParticle, 1.5f);
+
+        // ParticleSystem[] particleSystems = projectileParticle.GetComponentsInChildren<ParticleSystem>();
+        // foreach (ParticleSystem ps in particleSystems)
+        // {
+        //     // Debug.Log("파티클 꼬리 자르는 중");
+        //     // ps.Clear();
+        //     ps.Simulate(0, true, true);  // 0초 동안 시뮬레이션하여 초기화 (리셋)
+        //     ps.Play();
+        // }
+    }
+
+    private void OnDisable()
+    {
+        // ParticleSystem[] particleSystems = projectileParticle.GetComponentsInChildren<ParticleSystem>();
+        // foreach (ParticleSystem ps in particleSystems)
+        // {
+        //     Debug.Log("파티클 꼬리 자르는 중");
+        //     ps.Clear();
+        //     // ps.Play();
+        // }
+
+
+    }
 
     private void Update()
     {
@@ -117,7 +136,13 @@ public class Projectile : MonoBehaviour
         }
 
         impactParticle = GameManager.Instance.Instantiate("towerImpactParticle" + towerType, transform.position, Quaternion.identity); // 이거 한번만 터지는지 확인
-        GameManager.Instance.Destroy(impactParticle, 2f);
+        GameManager.Instance.Destroy(impactParticle, 1f);
+
+        // if (projectileParticle != null)
+        // {
+        //     projectileParticle.transform.parent = null; // 여기서 왜 null 오류 터지는지?? 확인이.. 필요...
+        //     GameManager.Instance.Destroy(projectileParticle);
+        // }
 
         //Debug.Log($"타워 투사체가 충돌한 대상 : {other.gameObject.name}, 타워 투사체의 위치 : {transform.position}");
 
@@ -130,15 +155,16 @@ public class Projectile : MonoBehaviour
                 if (isSingleAttack)
                 {
                     //Debug.Log($"일반 공격 대상 : {other.gameObject.name}");
-                    if (isKnockBackOn)
-                    {
-                        targetMonster.Knockback(transform.position); // 임시로 아무 인수나 넣어 둠
-                    }
+                    // if (isKnockBackOn)
+                    // {
+                    //     Vector3 dir = targetDirection.normalized * 0.00001f;
+                    //     targetMonster.Knockback(dir); // 임시로 아무 인수나 넣어 둠
+                    // }
 
-                    if (isSlowDebuffOn)
-                    {
-                        targetMonster.DebuffSlow(0.7f, 3f); // float slowRate, float duration
-                    }
+                    // if (isSlowDebuffOn)
+                    // {
+                    //     targetMonster.DebuffSlow(0.7f, 3f); // float slowRate, float duration
+                    // }
 
                     targetMonster.OnDamage(projectileDamage, isMagicAttack, transform.position, towerPhotonViewId);
                 }
@@ -169,7 +195,8 @@ public class Projectile : MonoBehaviour
                 //Debug.Log($"범위 공격 대상 : {hitCollider.gameObject.name}");
                 if (isKnockBackOn)
                 {
-                    targetMonster.Knockback(transform.position); // 임시로 아무 인수나 넣어 둠
+                    Vector3 dir = targetDirection.normalized * 2f;
+                    targetMonster.Knockback(dir);
                 }
 
                 if (isSlowDebuffOn)
@@ -182,12 +209,11 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    // private void DestroyProjectileDamage()
-    // {
-    //     projectileParticle.transform.parent = null;
-
-    //     GameManager.Instance.Destroy(projectileParticle);
-    // }
+    private void DestroyProjectileDamage()
+    {
+        projectileParticle.transform.parent = null;
+        GameManager.Instance.Destroy(projectileParticle);
+    }
 
     private void OnDrawGizmos()
     {

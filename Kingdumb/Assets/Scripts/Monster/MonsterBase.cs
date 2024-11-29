@@ -18,6 +18,9 @@ public abstract class MonsterBase : MonoBehaviourPun, IMonster
     protected CapsuleCollider _collider;
     protected Rigidbody _rb;
 
+    [SerializeField]
+    protected GameObject _minimapPoint; // 미니맵 표시용 점
+
     protected int _viewId;
     [SerializeField] protected float attackAnimationLength;
 
@@ -137,7 +140,7 @@ public abstract class MonsterBase : MonoBehaviourPun, IMonster
         FindTarget();
     }
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         _currHp = _maxHp;
         _ui.UpdateHpBar(_currHp/_maxHp);
@@ -157,6 +160,7 @@ public abstract class MonsterBase : MonoBehaviourPun, IMonster
         {
             SetRandomDefaultTarget();
         }
+        ShowMinimapPoint();
         //_animator = GetComponent<Animator>();
     }
 
@@ -396,6 +400,7 @@ public abstract class MonsterBase : MonoBehaviourPun, IMonster
         _animator.SetBool("IsMoving", false);
         _animator.SetTrigger("Dead");
         
+        HideMinimapPoint();
         _collider.enabled = false;
         foreach(Collider collider in GetComponentsInChildren<Collider>())
         {
@@ -616,6 +621,22 @@ public abstract class MonsterBase : MonoBehaviourPun, IMonster
     public void OnHit()
     {
         _soundComponent.PlaySound(MonsterSoundType.Hit);
+    }
+
+    // 미니맵 관련
+    public void ShowMinimapPoint()
+    {
+        if (_minimapPoint != null)
+        {
+            _minimapPoint.SetActive(true);
+        }
+    }
+    public void HideMinimapPoint()
+    {
+        if (_minimapPoint != null)
+        {
+            _minimapPoint.SetActive(false);
+        }
     }
 }
 

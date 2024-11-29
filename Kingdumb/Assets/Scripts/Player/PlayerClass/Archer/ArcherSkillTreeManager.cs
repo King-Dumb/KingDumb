@@ -55,7 +55,7 @@ public class ArcherSkillTreeManager : MonoBehaviourPun, ISkillTree
                 break;
             case 8:
                 // 트리플 샷 상태 시 공격력 증가 (check)
-                result = archer.SkillDamageUp(0.5f);
+                result = archer.SkillDamageUp(5f);
                 break;
             case 9:
                 // 트리플 샷 상태 시 방어구 관통 (check)

@@ -15,7 +15,12 @@ public class UltimateHolder : EffectHolder
 
     private int _ownerPhotonViewID;
 
-    private float _ultimateDamage = 10;
+    private float _ultimateDamage;
+
+    public void SetUltimateDamage(float ultimateDamage)
+    {
+        _ultimateDamage = ultimateDamage;
+    }
 
     public override void InitializeEffects()
     {

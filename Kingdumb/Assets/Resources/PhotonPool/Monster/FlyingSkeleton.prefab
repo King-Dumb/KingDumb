@@ -237,7 +237,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8231533210879514318, guid: ec3da66061dcb8548b506fe5bd8ed024, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8101546638625873763, guid: ec3da66061dcb8548b506fe5bd8ed024,
@@ -563,6 +564,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1982753729789305324}
   m_SourcePrefab: {fileID: 100100000, guid: 30098718d07c06545a504e87719d5bcc, type: 3}
+--- !u!1 &1771475481302277616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2343122418911886754, guid: 30098718d07c06545a504e87719d5bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4040286302898823250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3356118762879269178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1622050988990404968, guid: 30098718d07c06545a504e87719d5bcc,
@@ -582,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterInfo: {fileID: 11400000, guid: 1e6eed03b38a6cb46b673a3a25987c4b, type: 2}
+  _minimapPoint: {fileID: 1771475481302277616}
   attackAnimationLength: 0
   _target: {fileID: 0}
   _defaultTarget: {fileID: 0}

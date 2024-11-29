@@ -1,11 +1,10 @@
 using Photon.Pun;
-using Photon.Realtime;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static PlayerSoundEntry;
+
 public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
 {
     public Vector3 Position => transform.position;
@@ -14,27 +13,34 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
 
     //protected PhotonView 포톤 뷰 ID
 
-    protected float _hp; //체력
-    protected bool _dead = false; // 사망 여부
     protected float _maxHp; // 체력 최대치
+    protected float _hp; //체력
+    protected float _defencePower; // 방어력
+
     protected float _baseMoveSpeed; // 기준 이동속도
     protected float _moveSpeed; // 이동속도
     protected float _runningSpeed; // 달리기 속도
+
     protected float _baseAttackDamage; // 기준 공격력
+    protected float _baseSkillDamage; // 기준 스킬 공격력
+    protected float _baseUltimateDamage; // 기준 궁극기 공격력
     protected float _attackDamage; // 공격력
-    protected float _defencePower; // 방어력
+    protected float _skillDamage; // 스킬 공격력
+    protected float _ultimateDamage; // 궁극기 공격력
+
     protected float _attackDuration; // 공격 속도
     protected float _skillDuration; // 스킬 쿨타임
     protected float _ultimateDuration; // 궁 쿨타임
 
+    protected bool _dead = false; // 사망 여부
     protected float _reviveTime; // 부활 시간
 
     protected int _level; // 레벨
-    protected int _skillPoint; // 스킬포인트
-    public bool[] savedSkillNode = new bool[16]; // 찍은 스킬 저장
-
     protected int _exp; // 경험치
     protected int _gold; // 골드
+
+    protected int _skillPoint; // 스킬포인트
+    public bool[] savedSkillNode = new bool[16]; // 찍은 스킬 저장
 
     public Slider worldHpBar; // 월드상에서 보이는 hp bar
 
@@ -46,6 +52,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
     protected int _ownerPhotonViewID; // 플레이어의 포톤뷰 ID
 
     private PlayerWithNexus _playerWithNexus;
+    private PlayerWithTower _playerWithTower;
     private const string LevelUpEffectName = "LevelUpEffectGroup";
 
     private PlayerSoundComponent _soundComponent; // 플레이어가 발생시키는 소리를 관리하는 컴포넌트
@@ -60,6 +67,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         _animator = GetComponent<Animator>();
         _playerController = GetComponent<PlayerController>();
         _playerWithNexus = GetComponent<PlayerWithNexus>();
+        _playerWithTower = GetComponent<PlayerWithTower>();
         //_playerAudioPlayer = GetComponent<AudioSource>();
         damageOutline = GetComponent<DamageOutline>();
         damageOutline.enabled = false;
@@ -74,20 +82,16 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         _playerController.SetCooldownDuration(_ultimateDuration, PlayerController.AttackType.Ultimate);
 
         string sceneName = SceneManager.GetActiveScene().name;
-        // Debug.Log(sceneName);
+
         if (sceneName == "InGame" || sceneName == "InGame_2S" || sceneName == "InGame_3S")
         {
-            //StartCoroutine(CheckNexusState());
-            ActivePlayerWithNexusAndTower();
-            //photonView.RPC("ActivePlayerWithNexusAndTower", RpcTarget.All);
+            Revive();
         }
 
         //마스터 클라이언트에게 플레이어가 생성되었다고 알림
         if (photonView != null && photonView.IsMine)
         {
             photonView.RPC("NotifyMasterClient", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.ActorNumber);
-
-            worldHpBar?.gameObject.SetActive(false); // hpbar는 자기자신은 보이지않음
         }
     }
     private void Awake()
@@ -106,6 +110,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         _reviveTime = 8f;
     }
 
+    #region GetSet
     public string GetNickname() { return _nickname; }
     public void SetNickname(string nickname) { _nickname = nickname; }
 
@@ -138,6 +143,14 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
     public void SetBaseAttackDamage(float baseAttackDamage) { _baseAttackDamage = baseAttackDamage; }
     public float GetAttackDamage() { return _attackDamage; }
     public void SetAttackDamage(float attackDamage) { _attackDamage = attackDamage; }
+    public float GetBaseSkillDamage() { return _baseSkillDamage; }
+    public void SetBaseSkillDamage(float baseSkillDamage) { _baseSkillDamage = baseSkillDamage; }
+    public float GetSkillDamage() { return _skillDamage; }
+    public void SetSkillDamage(float skillDamage) { _skillDamage = skillDamage; }
+    public float GetBaseUltimateDamage() { return _baseUltimateDamage; }
+    public void SetBaseUltimateDamage(float baseUltimateDamage) { _baseUltimateDamage = baseUltimateDamage; }
+    public float GetUltimateDamage() { return _ultimateDamage; }
+    public void SetUltimateDamage(float ultimateDamage) { _ultimateDamage = ultimateDamage; }
 
     public float GetDefencePower() { return _defencePower; }
     public void SetDefencePower(float defencePower) { _defencePower = defencePower; }
@@ -162,7 +175,9 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
 
     public float GetReviveTime() { return _reviveTime; }
     public void SetReviveTime(float reviveTime) { _reviveTime = reviveTime; }
+    #endregion
 
+    #region 플레이어 체력 관련
     [PunRPC]
     public void ApplyUpdatedHealth(float newHp, bool newDead)
     {
@@ -342,6 +357,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
     {
         worldHpBar.value = newHp / _maxHp;
     }
+    #endregion
 
     public void EnableMovement()
     {
@@ -359,6 +375,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         }
     }
 
+    #region 죽음 관련
     public void Die()
     {
         // 넥서스를 안고 있었다면 떨구기
@@ -367,8 +384,9 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
             _playerWithNexus.ReleaseNexus();
         }
 
-        // 넥서스와 상호작용 비활성화
+        // 넥서스와 타워 상호작용 비활성화
         _playerWithNexus.enabled = false;
+        _playerWithTower.enabled = false;
         // 컨트롤러 비활성화
         _playerController.enabled = false;
 
@@ -406,17 +424,22 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
             }
         }
     }
+
     private void Revive()
     {
 
-        // 캐릭터 위치 초기화
-        transform.position = new Vector3(0, 2, 0);
+        if (_dead)
+        {
+            // 죽었다가 부활하는 거라면 캐릭터 위치 초기화
+            transform.position = new Vector3(0, 2, 0);
+        }
 
         // 최대 체력 회복
         _hp = _maxHp;
 
-        // 넥서스와 상호작용 활성화
+        // 넥서스와 타워 상호작용 활성화
         _playerWithNexus.enabled = true;
+        _playerWithTower.enabled = true;
         // 컨트롤러 활성화
         _playerController.enabled = true;
         // 사망 상태 변경
@@ -450,7 +473,16 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
     {
         return _dead;
     }
+    #endregion
 
+    [PunRPC]
+    public void NotifyMasterClient(int actorNumber)
+    {
+        // Debug.Log("!@@플레이어 생성 완료@@"+actorNumber);
+        GameManager.Instance.CheckPlayerLoaded(actorNumber);
+    }
+
+    #region 스킬트리 관련
     public void SaveSkillNode(int num)
     {
         savedSkillNode[num] = true;
@@ -468,23 +500,6 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
             GameManager.Instance.Destroy(levelUpEffect, 2.0f);
         }
     }
-
-    [PunRPC]
-    public void ActivePlayerWithNexusAndTower()
-    {
-        // Debug.Log("찾았어요!!!!!!!!!!!!!!!");
-        gameObject.GetComponent<PlayerWithNexus>().enabled = true;
-        gameObject.GetComponent<PlayerWithTower>().enabled = true;
-    }
-
-    [PunRPC]
-    public void NotifyMasterClient(int actorNumber)
-    {
-        // Debug.Log("!@@플레이어 생성 완료@@"+actorNumber);
-        GameManager.Instance.CheckPlayerLoaded(actorNumber);
-    }
-
-    // 스킬트리 관련--------------------------------------------------------------
 
     public int AddSkillPoint()
     {
@@ -510,9 +525,9 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         if (photonView.IsMine)
         {
             ISkillTree skillTree = gameObject.GetComponent<ISkillTree>();
-             Debug.Log("@@레벨계승@@" + _level);
+            //  Debug.Log("@@레벨계승@@" + _level);
             _skillPoint = IngameManager.Inst.CurLevel;
-             Debug.Log("받아온 스킬 포인트는: " + _skillPoint);
+            //  Debug.Log("받아온 스킬 포인트는: " + _skillPoint);
             bool[] prevData = GameManager.Instance.savedSkillNode;
 
             if (prevData != null && prevData.Length > 0)
@@ -551,7 +566,7 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
         {
             if (!photonView.IsMine)
             {
-                Debug.Log($"소유주{photonView.Owner.NickName}에게 스킬 정보를 요청");
+                // Debug.Log($"소유주{photonView.Owner.NickName}에게 스킬 정보를 요청");
                 // 소유주에게 스킬 정보를 요청
                 photonView.RPC("LoadSkillResponseForOthers", photonView.Owner, photonView.ViewID);
             }
@@ -595,4 +610,5 @@ public abstract class CharacterInfo : MonoBehaviourPun, IDamageable
             }
         }
     }
+    #endregion
 }

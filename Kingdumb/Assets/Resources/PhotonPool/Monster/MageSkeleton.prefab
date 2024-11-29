@@ -168,11 +168,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterInfo: {fileID: 11400000, guid: 2db7f97a43bb3a3459add74905f05841, type: 2}
+  _minimapPoint: {fileID: 2687399985477096371}
   attackAnimationLength: 2.625
-  _currHp: 0
   _target: {fileID: 0}
+  _defaultTarget: {fileID: 0}
+  playerTargetChance: 0.3
   projectilePrefab: {fileID: 128572, guid: bfbc3569d028dbe4ca775acab6336e38, type: 3}
-  _projectileSpeed: 9
+  _projectileSpeed: 7.5
   _projectileDuration: 2.5
   projectileGenPos: {fileID: 8413453155700607664}
 --- !u!114 &8930571735932164240
@@ -199,6 +201,12 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &2687399985477096371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2343122418911886754, guid: 30098718d07c06545a504e87719d5bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 418801095683321361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3695491048967219328 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3929079406385694353, guid: 30098718d07c06545a504e87719d5bcc,

@@ -22,6 +22,7 @@ public class ThrowingSword : MonoBehaviour
     {
         defaultSword.SetActive(false);
         initialPosition = transform.parent.position;
+        initialPosition.y = 1f;
         travelProgress = 0f;
         fixedDirection = transform.parent.forward;
     }

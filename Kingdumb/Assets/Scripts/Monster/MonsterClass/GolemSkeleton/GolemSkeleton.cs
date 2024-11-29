@@ -126,11 +126,11 @@ public class GolemSkeleton : MonsterBase
         {
             case BossAttack.NormalAttack:
                 SetNextAttack(_nextSkill);
+                ChangeNextSkill();
                 break;
             case BossAttack.Smash:
             case BossAttack.CastSpell:
             case BossAttack.BattleCry:
-                ChangeNextSkill();
                 SetNextAttack(BossAttack.NormalAttack);
                 break;
         }
@@ -167,6 +167,7 @@ public class GolemSkeleton : MonsterBase
         weaponCollider.enabled = false;
         _lastAttackTime = Time.time; // 공격주기 끝난 후에 초기화
         ChangeState(MonsterState.AttackReady);
+        ChangeNextAttack();
         //Debug.Log($"{monsterInfo.monsterName}의 공격 종료");
     }
 

@@ -17,6 +17,10 @@ public class FlyingSkeleton : MonsterBase
 
     private Coroutine attackCoroutine;
 
+    private Vector3 originalPosition = Vector3.up*2f;
+
+    public override Vector3 Position => head.position;
+
     protected override void Awake()
     {
         base.Awake();
@@ -27,9 +31,11 @@ public class FlyingSkeleton : MonsterBase
         monsterWeapon.Initialize(monsterInfo.attackDamage, _viewId, photonView); // 의존성 주입
     }
 
-    private Vector3 originalPosition = Vector3.up*2f;
-
-    public override Vector3 Position => head.position;
+    public override void Initialize()
+    {
+        base.Initialize();
+        head.localPosition = originalPosition;
+    }
 
     public override void Attack()
     {

@@ -69,7 +69,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5055056538353112029, guid: 7a3637b457e0c7c4993e13be53eb52f7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6364079967277376172, guid: 7a3637b457e0c7c4993e13be53eb52f7,
@@ -341,6 +342,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8695732191254304089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6352612287728806139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2343122418911886754, guid: 30098718d07c06545a504e87719d5bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 8695732191254304089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7939807234676771889 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1622050988990404968, guid: 30098718d07c06545a504e87719d5bcc,
@@ -360,9 +367,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterInfo: {fileID: 11400000, guid: 2e13bfa05ea02f549b847826c5134d7b, type: 2}
+  _minimapPoint: {fileID: 6352612287728806139}
   attackAnimationLength: 1.5
-  _currHp: 0
   _target: {fileID: 0}
+  _defaultTarget: {fileID: 0}
+  playerTargetChance: 0.3
   monsterLeftWeapon: {fileID: 4226775135996771110}
   monsterRightWeapon: {fileID: 2610520812457062963}
 --- !u!1001 &9208859127729909512

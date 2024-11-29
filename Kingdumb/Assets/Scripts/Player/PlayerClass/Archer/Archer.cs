@@ -19,7 +19,6 @@ public class Archer : CharacterInfo, IPlayerClass
     private int _arrowCount;
     private int _attackCount;
     private int _skillCount;
-    private float _skillDamage;
     private bool _isMagic;
     private bool _isDestroy;
     private bool _isKnockBack;
@@ -45,11 +44,13 @@ public class Archer : CharacterInfo, IPlayerClass
         _maxHp = _hp = 100; // 기준 최대 체력, 채력
         _baseMoveSpeed = _moveSpeed = 5f; // 기준 이동 속도, 이동 속도
         _runningSpeed = 2 * _moveSpeed; // 달리기 속도
-        _baseAttackDamage = _attackDamage = 12; // 기준 공격력, 공격력
+        _baseAttackDamage = _attackDamage = 15f; // 기준 공격력, (버프 받는) 공격력
+        _baseSkillDamage = _skillDamage = 20f; // 기준 스킬 공격력, (버프 받는) 스킬 공격력
+        _baseUltimateDamage = _ultimateDamage = 5f; // 기준 궁극기 공격력, (버프 받는) 궁극기 공격력
         _defencePower = 0; // 방어력
         _attackDuration = 0.6f; // 공격속도(초)
         _skillDuration = 20f; // 스킬 쿨타임(초)
-        _ultimateDuration = 30f; // 궁 쿨타임(초)
+        _ultimateDuration = 90f; // 궁 쿨타임(초)
         _level = 1; // 레벨
         _skillPoint = 1; // 스킬 포인트
     }
@@ -64,7 +65,6 @@ public class Archer : CharacterInfo, IPlayerClass
         _arrowCount = 0;
         _attackCount = 1;
         _skillCount = 3;
-        _skillDamage = 1.3f;
         _isMagic = false;
         _isDestroy = true;
         _isKnockBack = false;
@@ -269,7 +269,7 @@ public class Archer : CharacterInfo, IPlayerClass
             {
                 // 스킬 활성화 시 마법화살
                 useArrowPrefab = magicArrowPrefab;
-                arrowDmg = _baseAttackDamage * _skillDamage;
+                arrowDmg = _skillDamage;
                 // 캐릭터의 바라보는 방향(direction)으로부터 일정 거리 앞에 화살을 생성
                 position += direction * 1f;
             }
@@ -277,13 +277,13 @@ public class Archer : CharacterInfo, IPlayerClass
             {
                 // 차징 활성화가 되었고 배율 적용 시(차징 이펙트 적용 시) 차징화살
                 useArrowPrefab = chargingArrowPrefab;
-                arrowDmg = _baseAttackDamage * chargeMultiplier;
+                arrowDmg = _attackDamage * chargeMultiplier;
             }
             else
             {
                 // 기본 화살
                 useArrowPrefab = arrowPrefab;
-                arrowDmg = _baseAttackDamage;
+                arrowDmg = _attackDamage;
             }
 
             if (photonView != null)
@@ -395,7 +395,7 @@ public class Archer : CharacterInfo, IPlayerClass
         GameObject ultimateArrow = GameManager.Instance.Instantiate(ultimatePrefab.name, position, dir);
         if (ultimateArrow.TryGetComponent<IArrow>(out var arrow))
         {
-            arrow.SetDamage((int) _attackDamage * 0.3f);
+            arrow.SetDamage((int) _ultimateDamage);
             arrow.SetDirection(new Vector3(direction.x, 0, direction.z));
             arrow.SetOwnerPhotonViewID(_ownerPhotonViewID);
         }

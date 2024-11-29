@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: MageSkeleton
   hp: 100
-  attackDamage: 30
+  attackDamage: 25
   defencePower: 0
   moveSpeed: 2
   rotationSpeed: 480

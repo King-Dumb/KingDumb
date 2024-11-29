@@ -350,11 +350,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterInfo: {fileID: 11400000, guid: 91aa3283eb6453d478e53671ff184368, type: 2}
+  _minimapPoint: {fileID: 8839400641526267420}
   attackAnimationLength: 1.6
-  _currHp: 0
   _target: {fileID: 0}
+  _defaultTarget: {fileID: 0}
+  playerTargetChance: 0.3
   monsterWeapon: {fileID: 462685403486577312}
-  skillInterval: 2
+  attackTimeout: 10
+  attackRangeList:
+  - 1
+  - 1.5
+  - 8
+  - 8
+  outOfAttackRangeList:
+  - 1.5
+  - 2
+  - 10
+  - 10
   smashDamage: 50
   smashDamageField: {fileID: 4045804115691929922, guid: ede668f9bde100e47b8f724577fb364c,
     type: 3}
@@ -530,7 +542,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8120744351410482297, guid: 10872a79db0978941a8cb5f1ad57926a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5252013889981263169, guid: 10872a79db0978941a8cb5f1ad57926a,
@@ -632,6 +645,12 @@ PrefabInstance:
 --- !u!4 &7686282296479022084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 905103318263293829, guid: 3133d0e3f6ee05e40a83ae99fc82fbe4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7360214031176375169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8839400641526267420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2057977520322864541, guid: 3133d0e3f6ee05e40a83ae99fc82fbe4,
     type: 3}
   m_PrefabInstance: {fileID: 7360214031176375169}
   m_PrefabAsset: {fileID: 0}
